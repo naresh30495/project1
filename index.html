@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Course Feedback Form</h2>
+
+    <form id="feedbackForm">
+        <label>Student Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label>Course Name:</label>
+        <input type="text" id="course" required><br><br>
+
+        <label>Instructor Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5" required><br><br>
+
+        <label>Comments:</label><br>
+        <textarea id="comments"></textarea><br><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

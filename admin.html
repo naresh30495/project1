@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h2>All Feedback</h2>
+    <div id="feedbackList"></div>
+
+    <script>
+        let feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+        let output = "";
+
+        feedbacks.forEach(f => {
+            output += `
+                <p>
+                Name: ${f.name} <br>
+                Course: ${f.course} <br>
+                Rating: ${f.rating} <br>
+                Comments: ${f.comments}
+                </p>
+                <hr>
+            `;
+        });
+
+        document.getElementById("feedbackList").innerHTML = output;
+    </script>
+</body>
+</html>
