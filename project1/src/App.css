@@ -1,93 +1,42 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Background */
-body {
-  background: linear-gradient(to right, #667eea, #764ba2);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Main Container */
-.container {
-  background: white;
-  width: 500px;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Heading */
-h1 {
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 25px;
-  color: #333;
 }
 
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* Inputs */
-input,
-textarea {
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  transition: 0.3s;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-input:focus,
-textarea:focus {
-  border-color: #667eea;
-  outline: none;
-  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-/* Button */
-button {
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  background: #667eea;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #5a67d8;
-}
-
-/* Submitted Section */
-h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #444;
-}
-
-/* Feedback Cards */
 .card {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  border-left: 5px solid #667eea;
+  padding: 2em;
 }
 
-.card p {
-  margin: 5px 0;
-  font-size: 14px;
+.read-the-docs {
+  color: #888;
 }
